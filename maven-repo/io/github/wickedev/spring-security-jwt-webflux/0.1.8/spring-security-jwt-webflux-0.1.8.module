@@ -1,0 +1,129 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "io.github.wickedev",
+    "module": "spring-security-jwt-webflux",
+    "version": "0.1.8",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.3.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 15,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-coroutines-reactor"
+        },
+        {
+          "group": "org.springframework.security",
+          "module": "spring-security-core"
+        },
+        {
+          "group": "org.springframework.security",
+          "module": "spring-security-web"
+        },
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-starter-webflux"
+        },
+        {
+          "group": "org.springframework.security",
+          "module": "spring-security-oauth2-jose"
+        },
+        {
+          "group": "org.bouncycastle",
+          "module": "bcpkix-jdk15on",
+          "version": {
+            "requires": "1.69"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "spring-security-jwt-webflux-0.1.8-plain.jar",
+          "url": "spring-security-jwt-webflux-0.1.8-plain.jar",
+          "size": 54577,
+          "sha512": "6bebbc418f9b92a61f6ad87f557d52ed02b2bfe5975770f0ffcb922fc0b925db72d0f389917d7782bda261be8b075ef36f5f8b552a6b22f2d8c61fb0c4e3e40c",
+          "sha256": "975b5974ca7eebcb3f51d7eb8c85aa9e5bc1a09a429f6ae05e66110cbd8b9ecd",
+          "sha1": "d586725d2186e2c5f97088aa67c9722941f01ef0",
+          "md5": "c84e6cd921e59a4fd6f5a57477e255ba"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 15,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.6.10"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-coroutines-reactor"
+        },
+        {
+          "group": "org.springframework.security",
+          "module": "spring-security-core"
+        },
+        {
+          "group": "org.springframework.security",
+          "module": "spring-security-web"
+        },
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-starter-webflux"
+        },
+        {
+          "group": "org.springframework.security",
+          "module": "spring-security-oauth2-jose"
+        },
+        {
+          "group": "org.bouncycastle",
+          "module": "bcpkix-jdk15on",
+          "version": {
+            "requires": "1.69"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "spring-security-jwt-webflux-0.1.8-plain.jar",
+          "url": "spring-security-jwt-webflux-0.1.8-plain.jar",
+          "size": 54577,
+          "sha512": "6bebbc418f9b92a61f6ad87f557d52ed02b2bfe5975770f0ffcb922fc0b925db72d0f389917d7782bda261be8b075ef36f5f8b552a6b22f2d8c61fb0c4e3e40c",
+          "sha256": "975b5974ca7eebcb3f51d7eb8c85aa9e5bc1a09a429f6ae05e66110cbd8b9ecd",
+          "sha1": "d586725d2186e2c5f97088aa67c9722941f01ef0",
+          "md5": "c84e6cd921e59a4fd6f5a57477e255ba"
+        }
+      ]
+    }
+  ]
+}
