@@ -44,14 +44,12 @@ class JwtWebFluxSecurityConfiguration {
     @Bean
     @ConditionalOnMissingBean
     fun jwtAuthenticationService(
-        jwtProperties: JwtProperties,
         jwtEncoder: JwtEncoder,
         jwtDecoder: JwtDecoder,
         passwordEncoder: PasswordEncoder,
         userDetailsService: ReactiveUserDetailsService,
     ): ReactiveJwtAuthenticationService {
         return DefaultReactiveJwtAuthenticationService(
-            jwtProperties,
             jwtEncoder,
             jwtDecoder,
             passwordEncoder,

@@ -7,7 +7,6 @@ import org.springframework.http.HttpHeaders
 import org.springframework.test.web.reactive.server.WebTestClient
 import org.springframework.web.reactive.function.BodyInserters
 
-
 @SpringBootTest
 @AutoConfigureWebTestClient
 class JwtTest(
@@ -22,6 +21,7 @@ class JwtTest(
                 .expectStatus().isOk
                 .expectBody()
                 .consumeWith(System.out::println)
+                .jsonPath("$.user").hasJsonPath()
                 .jsonPath("$.accessToken").hasJsonPath()
                 .jsonPath("$.tokenType").isEqualTo("Bearer")
                 .jsonPath("$.expiresIn").isNumber
@@ -40,6 +40,7 @@ class JwtTest(
                 .expectStatus().isOk
                 .expectBody()
                 .consumeWith(System.out::println)
+                .jsonPath("$.user").hasJsonPath()
                 .jsonPath("$.accessToken").hasJsonPath()
                 .jsonPath("$.tokenType").isEqualTo("Bearer")
                 .jsonPath("$.expiresIn").isNumber

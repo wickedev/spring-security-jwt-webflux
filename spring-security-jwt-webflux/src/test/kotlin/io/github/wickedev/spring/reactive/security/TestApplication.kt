@@ -2,6 +2,7 @@
 
 package io.github.wickedev.spring.reactive.security
 
+import com.fasterxml.jackson.annotation.JsonIgnore
 import io.github.wickedev.spring.reactive.security.decoder.JwtDecoder
 import io.github.wickedev.spring.reactive.security.jwt.JwtAuthenticationWebFilter
 import io.github.wickedev.spring.reactive.security.jwt.ReactiveJwtAuthenticationService
@@ -30,6 +31,7 @@ import reactor.core.publisher.Mono
 data class User(
     val id: Long,
     val email: String,
+    @JsonIgnore
     val hashSalt: String,
     val roles: List<String>,
 ) : SimpleIdentifiableUserDetails {
@@ -38,6 +40,7 @@ data class User(
 
     override fun getUsername(): String = email
 
+    @JsonIgnore
     override fun getPassword(): String = hashSalt
 
     override fun getAuthorities(): Collection<GrantedAuthority> = roles.map { SimpleGrantedAuthority(it) }
@@ -47,7 +50,6 @@ data class AuthRequest(
     val email: String,
     val password: String,
 )
-
 
 class UserService : ReactiveUserDetailsService {
     override fun findByUsername(username: String): Mono<UserDetails> {
@@ -102,7 +104,6 @@ class TestApplication {
         }
     }
 
-
     @Bean
     fun configure(http: ServerHttpSecurity, jwtDecoder: JwtDecoder): SecurityWebFilterChain {
         http.securityContextRepository(NoOpServerSecurityContextRepository.getInstance())
@@ -136,8 +137,9 @@ class TestApplication {
             val authRequest = it.awaitBodyOrNull<AuthRequest>()
                 ?: return@POST ServerResponse.badRequest().buildAndAwait()
 
-            val authResponse = jwtAuthenticationService.signIn(authRequest.email, authRequest.password).awaitFirstOrNull()
-                ?: return@POST ServerResponse.status(UNAUTHORIZED_STATUS_CODE).buildAndAwait()
+            val authResponse =
+                jwtAuthenticationService.signIn(authRequest.email, authRequest.password).awaitFirstOrNull()
+                    ?: return@POST ServerResponse.status(UNAUTHORIZED_STATUS_CODE).buildAndAwait()
 
             return@POST ServerResponse.ok().bodyValueAndAwait(authResponse)
         }
