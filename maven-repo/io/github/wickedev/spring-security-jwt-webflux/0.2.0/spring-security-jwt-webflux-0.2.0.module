@@ -1,0 +1,143 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "io.github.wickedev",
+    "module": "spring-security-jwt-webflux",
+    "version": "0.2.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.3.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 15,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-coroutines-reactor"
+        },
+        {
+          "group": "org.springframework.security",
+          "module": "spring-security-core"
+        },
+        {
+          "group": "org.springframework.security",
+          "module": "spring-security-web"
+        },
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-starter-webflux"
+        },
+        {
+          "group": "org.springframework.security",
+          "module": "spring-security-oauth2-jose"
+        },
+        {
+          "group": "org.bouncycastle",
+          "module": "bcpkix-jdk15on",
+          "version": {
+            "requires": "1.69"
+          }
+        },
+        {
+          "group": "com.nimbusds",
+          "module": "nimbus-jose-jwt",
+          "version": {
+            "requires": "9.19"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "spring-security-jwt-webflux-0.2.0-plain.jar",
+          "url": "spring-security-jwt-webflux-0.2.0-plain.jar",
+          "size": 54577,
+          "sha512": "0f22f3bd9d3f03a00e3413f047cc801b0e1e7f140f88440e7952f01d99bd5ca4b95e66b45022e643e0b8cca5880176f816acb98a73ceb49b2d2d167cc338d083",
+          "sha256": "54677279f215975db317f3796ba00a21106a5dca62b2953fad1b7def6e37a331",
+          "sha1": "66664808c550536a0443e2d75b6f219f9bb5685f",
+          "md5": "94ef67874576be03b7654aa5fe7c76a8"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 15,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.6.10"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-coroutines-reactor"
+        },
+        {
+          "group": "org.springframework.security",
+          "module": "spring-security-core"
+        },
+        {
+          "group": "org.springframework.security",
+          "module": "spring-security-web"
+        },
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-starter-webflux"
+        },
+        {
+          "group": "org.springframework.security",
+          "module": "spring-security-oauth2-jose"
+        },
+        {
+          "group": "org.bouncycastle",
+          "module": "bcpkix-jdk15on",
+          "version": {
+            "requires": "1.69"
+          }
+        },
+        {
+          "group": "com.nimbusds",
+          "module": "nimbus-jose-jwt",
+          "version": {
+            "requires": "9.19"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "spring-security-jwt-webflux-0.2.0-plain.jar",
+          "url": "spring-security-jwt-webflux-0.2.0-plain.jar",
+          "size": 54577,
+          "sha512": "0f22f3bd9d3f03a00e3413f047cc801b0e1e7f140f88440e7952f01d99bd5ca4b95e66b45022e643e0b8cca5880176f816acb98a73ceb49b2d2d167cc338d083",
+          "sha256": "54677279f215975db317f3796ba00a21106a5dca62b2953fad1b7def6e37a331",
+          "sha1": "66664808c550536a0443e2d75b6f219f9bb5685f",
+          "md5": "94ef67874576be03b7654aa5fe7c76a8"
+        }
+      ]
+    }
+  ]
+}
