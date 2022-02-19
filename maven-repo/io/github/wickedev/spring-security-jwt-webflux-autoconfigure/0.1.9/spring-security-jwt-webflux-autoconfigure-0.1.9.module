@@ -1,0 +1,100 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "io.github.wickedev",
+    "module": "spring-security-jwt-webflux-autoconfigure",
+    "version": "0.1.9",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.3.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 15,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "io.github.wickedev",
+          "module": "spring-security-jwt-webflux",
+          "version": {
+            "requires": "0.1.9"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.6.10"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "spring-security-jwt-webflux-autoconfigure-0.1.9-plain.jar",
+          "url": "spring-security-jwt-webflux-autoconfigure-0.1.9-plain.jar",
+          "size": 6412,
+          "sha512": "873f67ac879b2c83e3623d68557ef8115210ee237906c80fd1f8b4c46cf0b4b0b7fb7eaebbdd2726318d9253b7dd509ce332c4e93c89c970b281405bec17106e",
+          "sha256": "b9cf1349e353930ae24025382718be22f908db9b61a3fee387d2764fcf5c79ef",
+          "sha1": "f703b60768e9690edd3e2cdb294e7b642898f364",
+          "md5": "b591f3fd6d428175f75ea469c9908c22"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 15,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "io.github.wickedev",
+          "module": "spring-security-jwt-webflux",
+          "version": {
+            "requires": "0.1.9"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.6.10"
+          }
+        },
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-starter-security"
+        }
+      ],
+      "files": [
+        {
+          "name": "spring-security-jwt-webflux-autoconfigure-0.1.9-plain.jar",
+          "url": "spring-security-jwt-webflux-autoconfigure-0.1.9-plain.jar",
+          "size": 6412,
+          "sha512": "873f67ac879b2c83e3623d68557ef8115210ee237906c80fd1f8b4c46cf0b4b0b7fb7eaebbdd2726318d9253b7dd509ce332c4e93c89c970b281405bec17106e",
+          "sha256": "b9cf1349e353930ae24025382718be22f908db9b61a3fee387d2764fcf5c79ef",
+          "sha1": "f703b60768e9690edd3e2cdb294e7b642898f364",
+          "md5": "b591f3fd6d428175f75ea469c9908c22"
+        }
+      ]
+    }
+  ]
+}
